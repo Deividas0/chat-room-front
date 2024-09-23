@@ -10,11 +10,12 @@
     margin: 0 auto;
     margin-top: 150px;
     height: 700px;
+    border-style: solid;
 }
 .left-panel {
     justify-content: center;
-    border-style: double;
-    
+    border-style: solid;
+    background-color: rgb(234, 214, 214);
     width: 300px;
     color: rgb(0, 0, 0);
 }
@@ -27,15 +28,59 @@
     text-align: left;
     padding-top: 15px;
 }
+.left-panel li:hover{
+    color: red;
+}
 .middle-panel {
     width: 500px;
-    height: 600px;
-    background-color: blue;
-    color: aliceblue;
     display: block;
+}
+.middle-panel-chat {
+    height: 600px;
+    background-color: rgb(234, 214, 214);
+    border-style: solid;
+    align-content: end;
+}
+.middle-panel-chat h2{
+    display: flex;
+    word-wrap: break-word;
+    white-space: normal;
+    max-width: 100%;
+    overflow-wrap: break-word;
     
+}
+.middle-panel-footer {
+    background-color: rgb(234, 214, 214);
+    border-style: solid;
+    height: 92px;
+    align-content: center;
+    text-align: left;
+    display: flex;
+}
+.middle-panel-footer input{
+    display: flex;
+    justify-content: center;
+    width: 350px;
+    height: 50px;
+    margin-top: 20px;
+    
+}
+.middle-panel-footer button{
+    width: 100px;
+    height: 75px;
+    margin-left: 20px;
+    text-align: center;
+    align-self: center;
+    background-color: lightgreen;
+    border-style: solid;
+    border-radius: 25px;
+}
+.middle-panel-footer button:hover{
+    background-color: green;
+    transition: 1s;
 }
 .right-panel {
     width: 300px;
-    background-color: blueviolet;
+    background-color: rgb(234, 214, 214);
+    border-style: solid;
 }
