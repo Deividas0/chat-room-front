@@ -1,0 +1,41 @@
+.main-div {
+    display: flex;
+    align-content: center;
+}
+.container {
+    width: fit-content;
+    display: flex;
+    text-align: center; 
+    display: inline-flex;
+    margin: 0 auto;
+    margin-top: 150px;
+    height: 700px;
+}
+.left-panel {
+    justify-content: center;
+    border-style: double;
+    
+    width: 300px;
+    color: rgb(0, 0, 0);
+}
+.left-panel ol{
+    font-size: 20px;
+    margin-left: 20px;
+}
+.left-panel li{
+    justify-content: center;
+    text-align: left;
+    padding-top: 15px;
+}
+.middle-panel {
+    width: 500px;
+    height: 600px;
+    background-color: blue;
+    color: aliceblue;
+    display: block;
+    
+}
+.right-panel {
+    width: 300px;
+    background-color: blueviolet;
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/login.css">
+    <script src="/js/login.js"></script>
+</head>
+<body>
+    <div class="main">
+        <h1>Random chat room</h1>
+        <h3>Please log in</h3>
+        <h3 id="error-message" style="color: red;"></h3>
+        <form method="POST" class="login-form">
+              <label for="first">
+                    Email address:
+              </label>
+              <input type="text" 
+                     id="emailAddress" 
+                     name="emailAddress" 
+                     placeholder="Enter your Email address" required>
+
+              <label for="password">
+                    Password:
+              </label>
+              <input type="password"
+                     id="password" 
+                     name="password"
+                     placeholder="Enter your Password" required>
+
+              <div class="wrap">
+                    <button type="submit">
+                          Log in
+                    </button>
+              </div>
+        </form>
+        <p>Don't have an account?
+              <a href="registration.html"
+                 style="text-decoration: none;">
+                Registration
+              </a>
+        </p>
+        <p>Forgot your password?
+            <a href="forgotpassword.html"
+               style="text-decoration: none;">
+              Click on me
+            </a>
+      </p>
+  </div>
+</body>
+</html>
