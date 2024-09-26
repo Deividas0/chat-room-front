@@ -8,7 +8,7 @@
     text-align: center; 
     display: inline-flex;
     margin: 0 auto;
-    margin-top: 150px;
+    margin-top: 25px;
     height: 700px;
     border-style: solid;
 }
@@ -32,23 +32,21 @@
     color: red;
 }
 .middle-panel {
-    width: 500px;
+    width: 700px;
     display: block;
 }
 .middle-panel-chat {
     height: 600px;
     background-color: rgb(234, 214, 214);
     border-style: solid;
-    align-content: end;
-}
-.middle-panel-chat h2{
     display: flex;
-    word-wrap: break-word;
-    white-space: normal;
-    max-width: 100%;
-    overflow-wrap: break-word;
-    
+    flex-direction: column-reverse;
+    overflow-y: auto;
 }
+.messageContainer p{
+    text-align: left;
+}
+
 .middle-panel-footer {
     background-color: rgb(234, 214, 214);
     border-style: solid;
@@ -60,7 +58,7 @@
 .middle-panel-footer input{
     display: flex;
     justify-content: center;
-    width: 350px;
+    width: 450px;
     height: 50px;
     margin-top: 20px;
     
@@ -68,7 +66,7 @@
 .middle-panel-footer button{
     width: 100px;
     height: 75px;
-    margin-left: 20px;
+    margin-left: 70px;
     text-align: center;
     align-self: center;
     background-color: lightgreen;
@@ -83,4 +81,17 @@
     width: 300px;
     background-color: rgb(234, 214, 214);
     border-style: solid;
+}
+.rules li{
+    text-align: left;
+    font-size: 20px;
+    padding-top: 5px;
+}
+.leaveRoomBtn{
+    border-radius: 25px;
+    background-color: red;
+    color: aliceblue;
+    width: 150px;
+    height: 100px;
+    margin-top: 210px;
 }

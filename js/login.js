@@ -21,8 +21,11 @@ document.addEventListener('DOMContentLoaded', function(){
 
             if (response.ok) {
                 // Extract JWT token as plain text
-                const jwtToken = await response.text(); // The token is received as plain text
+                const data = await response.json();
+                const jwtToken = data.token;
+                const username = data.username;
                 setCookie("JwtToken", jwtToken)
+                setCookie("username", username)
                 window.location.href = 'chatroom.html'; 
             } else {
                 x.innerHTML = 'Invalid username or password';
