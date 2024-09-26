@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chat room</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.5.1/sockjs.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
     <link rel="stylesheet" href="/css/chatroom.css">
-    <script src="/js/chatroom.js"></script>
 </head>
 <body>
     <div class="main-div">
@@ -13,26 +14,36 @@
             <div class="left-panel">
                 <h1>Online users</h1>
                 <ol>
-                    <li>asd</li>
-                    <li>asd</li>
                 </ol>
             </div>
             <div class="middle-panel">
                 <div class="middle-panel-chat">
-                    <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa <span >sss</span></p>
-                    
-                    
+                    <ul class="messageContainer" id="messageList"></ul>
                 </div>
                 <div class="middle-panel-footer">
                     <label for="message"></label>
-                    <input type="text" placeholder="Type your message" required>
-                    <button >Send</button>
+                    <input id="messageInput" type="text" placeholder="Type your message" required>
+                    <button onclick="sendMessage()">Send</button>
                 </div>
                 </div>
             <div class="right-panel">
-                right panel
+                <h2>Chat-room information</h2>
+                <h4>Local time GMT +1</h4>
+                <p class="data"></p>
+                <h3>Rules:</h3>
+                <ol class="rules">
+                    <li>No swear words.</li>
+                    <li>Don't insult other members.</li>
+                    <li>This is not a market place.</li>
+                </ol>
+                <p style="font-size: 20px;">Breaking chat-room rules will not be 
+                    tolerated and you will get <span style="color: red;">banned</span>.
+                </p>
+                <p class="total-banned-users"></p>
+                <button class="leaveRoomBtn">Leave chat room</button>
             </div>
         </div>
     </div>
+    <script src="/js/chatroom.js"></script>
 </body>
 </html>
