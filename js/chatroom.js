@@ -1,12 +1,21 @@
-// Check for the presence of the 'JwtToken' cookie when the page loads
+// Check for JwtToken when the page loads
 document.addEventListener('DOMContentLoaded', function() {
     const jwtToken = getCookie('JwtToken'); 
 
-    // If the 'JwtToken' is not found, redirect to 'index.html'
+    // If the JwtToken is not found, redirect to 'index.html'
     if (!jwtToken) {
-        window.location.href = 'login.html'; // Redirect to index.html
+        window.location.href = 'login.html';
     }
+
+    // Fetch the latest 50 messages when the page loads
+    fetch('http://localhost:8080/messages/latest')
+        .then(response => response.json())
+        .then(messages => {
+            messages.reverse().forEach(displayMessage);
+        })
+        .catch(error => console.error('Error fetching messages:', error));
 });
+
 
 
 // Connection
@@ -88,11 +97,16 @@ function displayMessage(message) {
     if (message.sender === checkUser) { 
         messageElement.style.textAlign = "right"; 
         messageElement.style.backgroundColor = "#d1e7dd"; 
-        messageElement.style.marginLeft = "auto"; 
+        messageElement.style.marginLeft = "auto";
+        messageElement.style.borderRadius = "15px";
+        messageElement.style.width = "fit-content";
+
     }else {
         messageElement.style.textAlign = "left"; 
         messageElement.style.backgroundColor = "#f8d7da"; 
-        messageElement.style.marginRight = "auto"; 
+        messageElement.style.marginRight = "auto";
+        messageElement.style.borderRadius = "15px";
+        messageElement.style.width = "fit-content";
     }
 
     document.getElementById('messageList').appendChild(messageElement);
